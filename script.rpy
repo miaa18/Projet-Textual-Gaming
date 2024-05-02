@@ -1,5 +1,4 @@
 ﻿
-label start:
     #this starts the game 
     #intro
     #chapter1
