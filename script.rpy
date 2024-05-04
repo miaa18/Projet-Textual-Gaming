@@ -402,6 +402,50 @@ label BackToCar:
 
 label TheRural:
     scene bg the_rural 
+    'You step into the narrow passage between two buildings. there\'s a narrow alley that serves as the back entrance to the nearby restaurants. Trash cans overflow, filling the air with a strong smell. The alley is dimly lit, with graffiti on the walls. In the distance, a rat runs quickly from one side to the other.'
+    menu: 
+        'Continue running straight until you reach the end of the alley':
+            jump Deadend
+        'Hide inside a trash can':
+            jump TrashCan
+
+
+label Deadend:
+    'You keep running with all your energy and than you see a high wall between the two building its the end of the rural it\'s deadend what do you do next '
+    menu :
+        'Look for a Way to Climb Over':
+            jump ClimbOver
+        'Search for Hidden Exits':
+            jump Exit
+        'Call for Help':
+            jump CallFriend
+
+label ClimbOver:
+    'You decide to climb the wall. Moving quickly, you drag the heavy dumpster into position against the wall, creating a makeshift stepping platform. '
+    'You step onto the dumpster, testing its stability. It holds firm under your weight.'
+    'Reaching up, you grab a thick vine of ivy and pull yourself up, finding footholds in the uneven brickwork.'
+    'The wall is higher than it initially seemed, and the ivy, though helpful, is also a bit slippery. You need to be careful with each movement to avoid slipping.'
+    'Choose your options'
+    menu:
+        'Continue Climbing Carefully':     
+            jump ClimbSlow
+        'Hurry Up the Climb':
+            jump HurryUpTheClimb
+
+label ClimbSlow:
+label HurryUpTheClimb:
+label Exit:
+label CallFriend:
+
+
+label TrashCan:
+    'You open the trash cam the smell is atrocious there\'s rotten tomatos baby dapers some brown liquide and a lot of trash bags.'
+    'You get inside and you close it'
+    'From far you hear police man yelling and talking to each other but their words are not understanble '
+    'What do you do now?'
+    
+        
+
 
 label choiceEscape2:
 
@@ -470,8 +514,6 @@ label dashDoor: # not finished
 label Standing: #not finished
 label choice2:
 label YouLost :  #don't forget return to quit
-
-
 
 
 
