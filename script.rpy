@@ -176,38 +176,81 @@ label start:
     scene black with dissolve
     pause 3.0
 
+    #INTRODUCTION
 
-    #intro + police 
-label intro:
-    'You were casually sifting through your emails when one caught your eye..'
-    ' It appeared innocent enough, showcasing the profile photo of an old comrade from your military days, reaching out to catch up and sharing their social media link. Nostalgia swept over you, and without a second thought, you clicked on the link. However, instead of redirecting you to a familiar social media page, your screen flickered, and an app began downloading automatically. Cursing under your breath, you realized you had been hacked!'
-    'Then, a voice, heavily distorted yet oddly playful, emanated from your computer'
-label into2:
-    
-    h "Well, well, well, what do we have here?\" the voice taunted\"Seems our retired military friend has stumbled into quite the predicament. A hefty sum of 200 million sitting pretty in your account. Quite the windfall, wouldn't you say?" 
-    menu:
-        
-        'Who are you, and what do you want from me?':
-            jump intro3
-label intro3: 
-    h "Oh, come on now, no need for introductions. Let's just say I'm someone who likes a good game. How about a little deal? I'll send over a list of targets for you to take out, just for kicks."
-    menu:
-        'but why? What\'s the point of all this?':
-            jump intro4
-label intro4: 
-    h "Ah, where's the fun in explaining? Let's just say it's a little experiment of mine"
+    scene bg town with dissolve
+    "DATE: May 4th, 2024 \nLOCATION: (any city), USA"
+    scene black with dissolve
+    pause 1.0
+    scene bg waytown with dissolve
+    "You're heading home from work after a long day"
+    scene bg myroom with dissolve
+    "as usual, you unwind at your PC, scrolling through social media, checking out what's new."
+    "You also take a moment to check your emails.."
+    "While you're sifting through your emails, one caught your eyes.."
+    scene bg mail with dissolve
+    pause 7.0
+    scene black with dissolve
+    pause 0.5
+    scene bg mail2 with dissolve
+    "It appeared innocent enough, showcasing the profile photo of an old comrade from your military days"
+    "reaching out to catch up and sharing their social media link"
+    "Nostalgia swept over you, and without a second thought"
+    "You clicked on the link.."
+    scene glitshed3 
+    "However, instead of redirecting you to a familiar social media page"
+    "your screen flickered..."
+    scene black with dissolve
+    "an app began downloading automatically..."
+    "Cursing under your breath, you realized you had been HACKED !"
+    scene black with dissolve
+    pause 0.5
+    scene glitshed with dissolve
+    h "Well, well, well, what do we have here?"
+    h  "Seems our ex-military friend has stumbled into quite the situation!"
+    h "You are sitting on 200 mil stolen cash in your bank accounts."
+    "This wasn't just a random attack.. The hacker knew about your past"
+    scene black with dissolve
+    pause 1.0
+    scene glitshed
+    user "How did you find these files?"
+    h "Oh, let's just say I have my ways. The important thing is that they're in my possession now."
+    user "Who are you, and what do you want from me?"
+    h "come on now, no need for introductions"
+    h "Let's just say I'm someone who likes a good game."
+    scene black with dissolve
+    pause 0.5
+    scene bg son with dissolve
+    pause 3.0
+    scene black with dissolve
+    pause 0.5
+    scene glitshed with dissolve
+    h "This is your son right?"
+    user "Samy my son !"
+    h "You'll want him to stay safe, won't you?"
+    h "How about a little deal? I'll send over a list of Tasks for you to take out, just for kicks."
+    h "If you nail them, your shady past will be our little secret"
+    user "But why? What's the point of all this?"
+    h "Ah, where's the fun in explaining?"
+    h "Let's just say it is a little experiment of mine."
     h "And oh, by the way, you've got a week to play along. Your countdown starts tomorrow at 7:00 PM sharp!"
-
-label startPlay:
+    scene black with dissolve
+    pause 0.5
     # play music discrepancy_preview loop 
     scene bg pc_on_desk
-    "After enduring the most harrowing nightmare of your life, your computer screen returns to its usual state. What prudent action will you take next?"
-    
+    "After enduring the most harrowing nightmare of your life, your computer screen returns to its usual state."
+    user "What the hell happened... I never believed this was real."
+    user "I've put my life and my family's in danger because of my carelessness."
+    scene black with dissolve
     menu:
+        "What prudent action will you take next?"
         "Go to the police":
             jump choice1
         "Wait for the countdown to start tomorrow at 7:00 pm":
             jump choice2
+
+
+#POLICE (CERINE & SABRINE)
 
 label choice1:
     scene bg looking_phone 
@@ -518,6 +561,8 @@ label YouLost :  #don't forget return to quit
 
 
 
+#LAWYER TASK (IBTISSEM)
+label choice2:
 
 
     #SECOND CHAPTER
