@@ -297,7 +297,8 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            imagebutton auto "gui/mm_play_%s.png"  xpos 410 ypos 79 focus_mask True action ShowMenu("start")    
+            
 
         else:
 
@@ -305,9 +306,9 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        imagebutton auto "gui/mm_load_%s.png"  xpos 450 ypos 81 focus_mask True action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        imagebutton auto "gui/mm_options_%s.png"  xpos 490 ypos 80 focus_mask True action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,18 +318,18 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+#        textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            imagebutton auto "gui/mm_help_%s.png" xpos 535  ypos 80 focus_mask True action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            imagebutton auto "gui/mm_quit_%s.png" focus_mask True  xpos 568 ypos 75 action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -356,23 +357,22 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+#    #        style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    if gui.show_name:
+    #  if gui.show_name:
 
-        vbox:
-            style "main_menu_vbox"
+    #    vbox:
+    #       style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #        text "[config.name!t]":
+    #            style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #        text "[config.version]":
+    #          style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -471,7 +471,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    #use navigation
 
     textbutton _("Return"):
         style "return_button"
@@ -991,15 +991,15 @@ screen help():
                 textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                #if GamepadExists():
+                #    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+            #elif device == "gamepad":
+            #    use gamepad_help
 
 
 screen keyboard_help():
@@ -1076,33 +1076,33 @@ screen mouse_help():
         text _("Rolls forward to later dialogue.")
 
 
-screen gamepad_help():
+#screen gamepad_help():
 
-    hbox:
-        label _("Right Trigger\nA/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
+#    hbox:
+#        label _("Right Trigger\nA/Bottom Button")
+#        text _("Advances dialogue and activates the interface.")
 
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
+#    hbox:
+#        label _("Left Trigger\nLeft Shoulder")
+#        text _("Rolls back to earlier dialogue.")
 
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
+#    hbox:
+#        label _("Right Shoulder")
+#        text _("Rolls forward to later dialogue.")
 
-    hbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
+#    hbox:
+#        label _("D-Pad, Sticks")
+#        text _("Navigate the interface.")
 
-    hbox:
-        label _("Start, Guide, B/Right Button")
-        text _("Accesses the game menu.")
+#    hbox:
+#        label _("Start, Guide, B/Right Button")
+#        text _("Accesses the game menu.")
 
-    hbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
+#    hbox:
+#        label _("Y/Top Button")
+#        text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+#    textbutton _("Calibrate") action GamepadCalibrate()
 
 
 style help_button is gui_button
