@@ -205,13 +205,20 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+
+#THIS WILL MAKE THE CHOICES MOVE, CHANGE THE HOVER ZOOM(FOR ZOOM EFFECT) AND LINEAR(FOR RIGHT AND LEFT EFFECT)
 screen choice(items):
     style_prefix "choice"
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
-
+            textbutton i.caption action i.action at anim_choice_button
+transform anim_choice_button: 
+    on hover: 
+        linear 0 zoom 1.15 
+    on idle: 
+        linear 0.1 zoom 0.95
+#THE BLOCK ENDS HERE
 
 style choice_vbox is vbox
 style choice_button is button
@@ -715,10 +722,10 @@ screen savegameName(accept=NullAction()):
             xalign 0.5
             xysize (550, 40)
 
-        textbutton _("{u}Save the Game{/u}"):
+        textbutton _("{glitch}Save the Game {/glitch}"):
             xalign 0.5
-            keysym ['K_RETURN', 'K_KP_ENTER']
-            action [accept, (Hide("savegameName"))]
+            keysym ['K_RETURN']
+            action [accept, Hide("savegameName")]
 
 init python:
     import string
@@ -1220,6 +1227,7 @@ style help_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
 screen confirm(message, yes_action, no_action):
+    
 
     ## Ensure other screens do not get input while this screen is displayed.
     modal True
