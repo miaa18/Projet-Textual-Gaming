@@ -1,4 +1,5 @@
 ﻿
+
 #HERE WE DEFINE THE CHARACTERS
 
 define user=Character("[username]",color="#1613bd")
@@ -11,7 +12,7 @@ define r =Character("Nurse", color="#117428")
 define f =Character("Mr. Charles", color="#a22d5f")
 define mi =Character("Mina", color="#e63abe")
 define am =Character("Amber", color="#620c5d")
-
+define p =Character("The police officer", color="#3359FF")
 
 #GLITSH EFFECT
 
@@ -75,11 +76,8 @@ label start:
         label Male:
         "Hmm let's call you Leo "
         $ username="Leo"
-
     label next:
     "Welcome, dear [username] ! May the clarity of your mind guide your steps, for your choices design your life.."
-    
-
     window hide
    
     scene black with dissolve
@@ -170,6 +168,8 @@ label start:
     pause 3.0
 
     #INTRODUCTION
+    
+    
 
     scene bg town with dissolve
     "DATE: May 4th, 2024 \nLOCATION: (any city), USA"
@@ -245,8 +245,10 @@ label start:
 
 #POLICE (CERINE & SABRINE)
 
+
 label choice1:
-    scene bg looking_phone 
+    scene bg looking_phone with dissolve
+    pause 0.01
     "You\'re inside you car On you\'re way to the police station, you receive a text message on your phone from an unknown number. The message warns,\'If you set foot in the police station, I\'ll provide them with evidence of the illegal money transfers. What course of action do you take next?"
     menu:
         "Ignore the text and keep going":
@@ -255,6 +257,8 @@ label choice1:
             jump TextThemBack
         "Take a step back and instead wait for the countdown to start tommorow at 7:00 pm":
             jump choice2
+
+
 label TextThemBack:
     "You stop in the middle of the street, more furious than ever, you enter the chat on your phone with the unknown sender. What message do you type?"
     menu:
@@ -273,7 +277,8 @@ label UnavailableSender:
             jump PoliceStation
 
 label LookingAround:
-    scene bg choice_escape1
+    scene bg choice_escape1 with dissolve
+    pause 0.01
     "You exit your car, slamming the door shut, and begin to spin around in paranoid circles, scanning for any distant figures that might be observing you.Where do you wanna look?"
     menu:
         "Left":
@@ -283,19 +288,22 @@ label LookingAround:
         'Behind':
             jump Behind
 label Left:
-    scene bg street_with_a_few_people_looking_and_a_few_looking
+    scene bg street_with_a_few_people_looking_and_a_few_looking with dissolve
+    pause 0.01 
     'To the left, the street is hive of activity, with buildings lining either side, their facades varying from sleek modern designs to weathered brick structures ,The bustling street is like a lively symphony of motion  with cars, buses, and bicycles weaving through the traffic as pedestrians navigate the sidewalks. Nothing seems suspicious.'
     menu:
         'Look in the other directions' :
             jump Directions 
 label Right:
-    scene bg small_nice_town_houses_aligned
+    scene bg small_nice_town_houses_aligned with dissolve
+    pause 0.01 
     'To your right, you find a gently winding cobblestone path, leading up to a tranquil hillside town. The path is hugged by vibrant green bushes and the occasional splash of wildflowers that sway gently in the breeze. Ahead, the town emerges with a warm and inviting aura. The houses, painted in soft pastels, boast sun-kissed, terra cotta roofs and weathered wooden doors, suggesting years of stories and history within their walls'
     menu:
         'Look in the other directions':
             jump Directions 
 label Behind:
-    scene bg black_car_behind
+    scene bg black_car_behind with dissolve
+    pause 0.01 
     'Behind you, a sleek black car, guided by a man appearing to be in his thirties. The pathway is cocooned between two majestic lines of trees. On either side of the road stand townhouses, each their gardens. Amidst this serene scene, a woman leisurely strolls with her furry companion, the dog\'s tail wagging joyously as they explore the tranquil surroundings.' 
     menu:
         'Look in the other directions':
@@ -304,7 +312,8 @@ label Behind:
             jump TalkingWithCarGuy
 
 label Directions:
-    scene bg choice_escape1 
+    scene bg choice_escape1 with dissolve
+    pause 0.01 
     menu:
         'Left':
             jump Left
@@ -314,7 +323,8 @@ label Directions:
             jump Behind
 
 label TalkingWithCarGuy:
-    scene bg talking_with_car_guy
+    scene bg talking_with_car_guy with dissolve
+    pause 0.01 
     'As you approach the car, the man inside rolls down his window. What message do you intend to convey to him?'
     menu:
         'Are you following me ???':
@@ -329,7 +339,8 @@ label Question:
             jump badgeReveal
 
 label badgeReveal:
-    scene bg badge_reveal 
+    scene bg badge_reveal with dissolve
+    pause 0.01 
     'The man angrily exits his car, slamming the door shut, and abruptly thrusts a small wallet in your face. To your surprise, it\'s a police officer badge! He then begins questioning you about your identity.'
     menu:
         'Respond to his questions':
@@ -343,14 +354,16 @@ label Questions:
             jump FreeToGo
 
 label FreeToGo:
-    scene bg free_to_go 
+    scene bg free_to_go with dissolve
+    pause 0.01 
     'The police officer gives you a serious warning about unfounded accusations in the future. He informs you that he has noted your name and will conduct a brief investigation to ensure you\'re not involved in any suspicious activity.'
     menu:
         'Thank him and get back to your car':
             jump BackToCar
 
-    
 label Escaping:
+    scene bg direction with dissolve
+    pause 0.01 
     'As you contemplate the best direction to evade the police man, which path do you ultimately choose to take?'
     menu:
         'Go left':
@@ -360,16 +373,17 @@ label Escaping:
         'Look around before runing':
             jump Directions1
 
-
-
 label choiceEscape1:
-    scene bg escape_choice1
+    scene bg escape_choice1 with dissolve
+    pause 0.01 
     'Choosing to evade the police, you turn left into the bustling city streets, dodging between cars and buses. The scent of exhaust mixes with the aroma of street food as you disappear into the crowd. Suddenly, after just five minutes of running, the loud wail of police sirens reaches your ears!'
-    menu:#REMOVE CONTINUE ANS USE JUST A CLICK OR ENTER INSTEAD
+    menu:
         'Continue':
             jump Continue
 
 label Continue:
+    scene bg street_with_a_few_people_looking_and_a_few_looking with dissolve
+    pause 0.01 
     'Panic sets in as you realize the authorities are closing in. Desperation drives you to move faster, but in your haste, you collide with pedestrians with every step you take adding to the chaos while drawing more attention to yourself. What is you next move?'
     menu:
         'Keep running':
@@ -378,7 +392,8 @@ label Continue:
             jump TheRural
 
 label KeepRuning:
-    scene bg keep_running 
+    scene bg keep_running with dissolve
+    pause 0.01 
     'As you continue running, a police vehicle approaches from one direction, while another closes in from behind. You watch as the officers step out of their cars shouting "Stay still, don\'t move!\" \"Put your hands up!!.\". There seems to be no escape now. What do you wanna do ?'
     menu: 
         'Keep Trying':
@@ -386,7 +401,8 @@ label KeepRuning:
         'Give up':
             jump GiveUp
 label KeepTrying:
-    scene bg keeptrying
+    scene bg keeptrying with dissolve
+    pause 0.01 
     'You are surounded and guns are directed at you. Where do you choose to escape this police Besieged?'
     menu: 
         'You rush into the building to your left':
@@ -394,19 +410,21 @@ label KeepTrying:
         'Run backwords':
             jump RunBack
 label ArtGallery:
-    #photo
+    scene bg art_gallery with dissolve
+    pause 0.01 
     'As you desperately seek refuge, you spot an open door to a nearby building and rush inside. The dimly lit interior reveals white walls adorned with strange paintings and sculptures, hinting that you\'ve stumbled into an art gallery. But before you can take another step, a searing pain shoots through your knee, sending you crashing to the ground. The echo of a gunshot fills the hallway, and you realize with horror that you\'ve been hit. Darkness envelops you as the harsh reality sinks in: your escape attempt has ended in tragedy.'  
     jump YouLost
 label RunBack:
-    scene bg street_people_walk_and_police
+    scene bg street_people_walk_and_police with dissolve
+    pause 0.01 
     'As you frantically run backward, hoping to evade the pursuing officers, you unexpectedly stumble upon a group of additional police officers blocking your path. Before you can react, one of the officers swiftly grabs your hands, wrenching you off balance and causing you to fall to the ground. The world spins around you and with one final gasp, you succumb to unconsciousness, the events of the chase fading into oblivion'
     jump YouLost    
 
-label GiveUp:    
-    'As you give in, a police officer\'s voice cuts through the air, commanding you to get on the ground. With a heavy heart, you comply, dropping to the pavement as instructed. The cold surface presses against your palms as you acknowledge defeat, surrounded by the watchful eyes of bystanders. Soon, strong hands pull you up and guide you into the back of a waiting police car Soon, strong hands pull you up and guide you into the back of a waiting police car while the click of handcuffs signaling your capture. Groups of people gather, their murmurs blending with the noise of the sirens. '
-    jump YOULost
+
 
 label Directions1:
+    scene bg directions with dissolve
+    pause 0.01 
     menu : 
         'Left':
             jump Left1 
@@ -414,20 +432,23 @@ label Directions1:
             jump Right1
 
 label Left1:    
-    scene bg street_with_people_walking
+    scene bg street_with_people_walking with dissolve
+    pause 0.01 
     ' To the left, the street is hive of activity, with buildings lining either side, their facades varying from sleek modern designs to weathered brick structures ,The bustling street is like a lively symphony of motion  with cars, buses, and bicycles weaving through the traffic as pedestrians navigate the sidewalks. '
     menu:
         'choose to run Left':
             jump choiceEscape1
 label Right1:
-    #photo
+    scene bg a_gently_winding_cobblestone_path with dissolve
+    pause 0.01 
     'To your right, you find a gently winding cobblestone path, leading up to a tranquil hillside town. The path is hugged by vibrant green bushes and the occasional splash of wildflowers that sway gently in the breeze. Ahead, the town emerges with a warm and inviting aura. The houses, painted in soft pastels, boast sun-kissed, terra cotta roofs and weathered wooden doors, suggesting years of stories and history within their walls'
     menu:
         'choose to run Right' :
             jump choiceEscape2
 
 label BackToCar:
-    scene bg car_from_the_drivers_view_the_wheel
+    scene bg car_from_the_drivers_view_the_wheel with dissolve
+    pause 0.01 
     'You compose yourself and get into your car, slamming the door shut. You pause for a moment before starting the engine, pondering who the hacker could be? and how does he know your location? You wonder whether you should continue to the police station or wait to see what unfolds tomorrow. What do you think you should do next?'
     menu:
         'Go to the police station and tell them everything':
@@ -435,67 +456,73 @@ label BackToCar:
         'Go back home and wait for what tommorow holds':
             jump choice2 
 
-
 label TheRural:
-    scene bg the_rural 
+    scene bg the_rural with dissolve
+    pause 0.01 
     'You step into the narrow passage between two buildings. there\'s a narrow alley that serves as the back entrance to the nearby restaurants. Trash cans overflow, filling the air with a strong smell. The alley is dimly lit, with graffiti on the walls. In the distance, a rat runs quickly from one side to the other.'
     menu: 
         'Continue running straight until you reach the end of the alley':
             jump Deadend
         'Hide inside a trash can':
             jump TrashCan
-
-
 label Deadend:
+    scene bg high_wall with dissolve
+    pause 0.01 
     'You keep running with all your energy and than you see a high wall between the two building its the end of the rural it\'s deadend what do you do next '
     menu :
         'Look for a Way to Climb Over':
             jump ClimbOver
         'Search for Hidden Exits':
             jump Exit
-        'Call for Help':
-            jump CallFriend
-
+        
 label ClimbOver:
-    'You decide to climb the wall. Moving quickly, you drag the heavy dumpster into position against the wall, creating a makeshift stepping platform. '
+    'You decide to climb the wall. you drag the heavy dumpster into position against the wall, creating a makeshift stepping platform. '
     'You step onto the dumpster, testing its stability. It holds firm under your weight.'
     'Reaching up, you grab a thick vine of ivy and pull yourself up, finding footholds in the uneven brickwork.'
-    'The wall is higher than it initially seemed, and the ivy, though helpful, is also a bit slippery. You need to be careful with each movement to avoid slipping.'
-    'Choose your options'
     menu:
-        'Continue Climbing Carefully':     
-            jump ClimbSlow
         'Hurry Up the Climb':
             jump HurryUpTheClimb
-
-label ClimbSlow:
 label HurryUpTheClimb:
+    'As you scrambled to climb quickly, your foot slipped causing you to lose your balance and tumble to the ground. The pursuing policeman swiftly closed in, training his gun on you, his voice commanding you not to move'
+    jump GiveUp
 label Exit:
-label CallFriend:
-
+    scene bg exitdoor with dissolve
+    pause 0.01 
+    'you frantically tried to open the doors on both sides'
+    scene bg keep_trying with dissolve
+    pause 0.01 
+    ' Suddenly, the policeman who had been chasing you caught up ans pointed his gun ordering you not to move'
+    jump GiveUp 
 
 label TrashCan:
+    scene bg trashcan with dissolve
+    pause 0.01 
     'You open the trash cam the smell is atrocious there\'s rotten tomatos baby dapers some brown liquide and a lot of trash bags.'
     'You get inside and you close it'
-    'From far you hear police man yelling and talking to each other but their words are not understanble '
-    'What do you do now?'
+    'From far you hear police man yelling and talking to each other but their words are not understanble'
+    'you patiently waited for the policemen to pass by. Once their voices faded into the distance, you decided to return home and await the countdown, prepared to comply with the hacker\'s demands '
+    jump choice2 
+
+ 
     
-        
-
-
 label choiceEscape2:
-
+    scene bg nearbyhouse with dissolve
+    pause 0.01 
+    'After hastily finding refuge beside a nearby house, you patiently waited for the policemen to pass by. Once their voices faded into the distance, you decided to return home and await the countdown, prepared to comply with the hacker\'s demands '
+    jump choice2 
 
 
 label PoliceStation:
-    scene bg twopolices
+    scene bg twopolices with dissolve
+    pause 0.01 
     'You\'ve just stepped into the police station. To your right, two officers are chatting casually, one of them is holding a cup of steaming coffee.'
     jump Continue1
 label Continue1:
     'Ahead of you, a man in a suit briskly walks from the right to the left side of the station. He then ascends the stairs and disappears from view'
     jump Continue2
 label Continue2:
-    scene bg lady_sitting_at_her_desk_police-removebg
+    scene bg lady_sitting_at_her_desk_police with dissolve
+    pause 0.01 
     
     'You walk straight to a lady sitting at her desk, she appears to be conversing on the phone. You attempt to speak to her, but she gestures with her hand, indicating for you to wait. "One moment, sir," she mouths, focusing on her call. Where are you waiting untill she finishes?'   
     menu:
@@ -505,10 +532,16 @@ label Continue2:
             jump Standing 
 
 label Sitting:
-    'You sit on hard plastic chair, trying to blend into the background. The lady hangs up and makes a discreet hand signal to a nearby officer. You watch, your pulse quickening, as they engage in a brief, hushed conversation, occasionally glancing at a computer screen and then back at you'
+    scene bg nearby_police with dissolve
+    pause 0.01
+    'You sit on hard plastic chair, trying to blend into the background. The lady hangs up and makes a discreet hand signal to a nearby officer'
+    'You watch, your pulse quickening, as they engage in a brief, hushed conversation, occasionally glancing at a computer screen and then back at you'
     jump Continue3
 label Continue3:
-    'The air feels thick as the officer ends the conversation and starts walking towards you with deliberate steps. While reaching into his back pocket, which appears to contain handcuffs, he says, "Hey buddy,  just stay right where you are. I have a few questions for you." as he approaches. What are you doing next?'
+    scene bg police_walking with dissolve
+    pause 0.01 
+    'The air feels thick as the officer ends the conversation and starts walking towards you with deliberate steps'
+    'While reaching into his back pocket, which appears to contain handcuffs, he says, "Hey buddy,  just stay right where you are. I have a few questions for you." as he approaches. What are you doing next?'
     menu:
         'Stay still':
             jump StayStill
@@ -518,47 +551,167 @@ label Continue3:
             jump dashDoor
 
 label StayStill:
-    'You straighten your jacket and sit up tall, maintaining a composed and confident demeanor. You look the officer in the eye, ready to respond clearly and assertively. What do you say to the officer?'
+    scene bg policeTalkingWithyou with dissolve
+    pause 0.01 
+    'You straighten your jacket and sit up tall, maintaining a composed and confident demeanor. You look the officer in the eye, ready to respond clearly and assertively'
+    'What do you say to the officer?'
     menu:
         'Let him ask you the questions without saying anything' :
             jump nothing 
         'Hi sir and tell him why you came here in the fisrt place':   
             jump HiSir
         'Ask him if you are in trouble because him reaching out to handcuffs worried you' :
-            jump InTrouble
+            jump nothing 
 
 label nothing:
-    'The police officer\'s voice pierces the heavy silence, his tone firm as he commands,"Stand up." As you rise, he expertly secures the handcuffs around your wrists. While he does this, he begins to question you. It\'s clear from his pointed questions that he already knows far more about you than you expected. After confirming your identity, he recites  with a practiced clarity: "You have the right to remain silent. Anything you say can and will be used against you in a court of law. You have the right to consult with a lawyer and have that lawyer present during any questioning." His voice, steady and authoritative, leaves no room for doubt or negotiation as you process the gravity of the situation.'
+    'He expertly secures the handcuffs around your wrists. While he does this, he begins to question you. It\'s clear from his pointed questions that he already knows far more about you than you expected. After confirming your identity, he recites  with a practiced clarity.'
+    p ' "You have the right to remain silent. Anything you say can and will be used against you in a court of law. You have the right to consult with a lawyer and have that lawyer present during any questioning." His voice, steady and authoritative, leaves no room for doubt or negotiation as you process the gravity of the situation.'            
     menu:
         'Why am i being arrested ?':
             jump WhyArrested 
 label WhyArrested:
-    'He informs you gravely that you have been implicated in an illegal money transfer originating from a military base. He explains that the station has recently received compelling evidence that links you to the crime. His voice is stern and the look in his eyes serious as he details the steps that will follow. You will be detained at the station, held in custody until a thorough investigation can unravel the truth behind these accusations'
+    'He informs you gravely that you have been implicated in an illegal money transfer originating from a military base. He explains that the station has recently received compelling evidence that links you to the crime.'
+    'His voice is stern and the look in his eyes serious as he details the steps that will follow. You will be detained at the station, held in custody until a thorough investigation can unravel the truth behind these accusations'
     jump Continue4
 label Continue4:
-    'You find yourself confined within the stark walls of the interrogation room, the gravity of your situation becoming painfully clear. With nowhere to escape, you realize you\'ve been caught; the hacker has not only invaded your life but has exposed your deepest secret, turning your world upside down'      
+    scene bg interrogation_room with dissolve
+    pause 0.01  
+    'You find yourself confined within the stark walls of the interrogation room, the gravity of your situation becoming painfully clear.'
+    'With nowhere to escape, you realize you\'ve been caught; the hacker has not only invaded your life but has exposed your deepest secret, turning your world upside down'      
     jump YouLost
 
 label HiSir:
     'You tell him all about the hacker and the messages he sent you'
     jump next1
 
-label next1:  #not finished 
-label InTrouble: #not finished 
-label Staircases: #not finished 
-label dashDoor: # not finished 
-label Standing: #not finished
+label next1: 
+    p'So, you\'re saying you received this threat, but you\'ve done nothing illegal to warrant this kind of blackmail?'
+    menu:
+        "Exactly":
+            jump arrested
+        "Tell him the truth and accept you fate":
+            jump arrested
+label arrested:
+    p ' Stand up '
+    'As you rise, he expertly secures the handcuffs around your wrists. While he does this, he begins to question you'
+    'It\'s clear from his pointed questions that he already knows far more about you than you expected. After confirming your identity, he recites  with a practiced clarity.'
+    p '"You have the right to remain silent. Anything you say can and will be used against you in a court of law. You have the right to consult with a lawyer and have that lawyer present during any questioning." His voice, steady and authoritative, leaves no room for doubt or negotiation as you process the gravity of the situation.' 
+    p 'You will be detained at the station, held in custody until a thorough investigation can unravel the truth behind these accusations'
+    jump Continue4  
+
+label Staircases: 
+    scene bg doors_on_each_side with dissolve
+    pause 0.01 
+    'You are now on the second floor of the station, surrounded by various doors, each leading to a different room. Which door will you choose?'
+    menu:
+        "Conference Room":
+            jump Conference
+        "Go up another flight of stairs to the roof":
+            jump roof
+        "Records Room":
+            jump Record
+label Record:
+    scene bg room_where_towering_shelves with dissolve
+    pause 0.01 
+    'In this room you find yourself surrounded by towering shelves filled with files and various documents.'
+    'The room is dimly lit and seems rarely visited, giving you a sense of solitude. What are you doing next?'
+    menu:
+        'Secure the door':
+            jump securedoor
+        'Look for another exit':
+            jump exitFound
+label securedoor:
+    'What are you using to secure the door?'
+    menu:
+        'An old chair sitting in the corner':
+            jump chair
+        'Use a shelf that is sparsely filled':
+            jump shelf
+label exitFound:
+    'To your surprise, you discover a hidden door at the far end of the room.' 
+    scene bg officier_back with dissolve 
+    pause 0.01
+    'You open it and you find yourself in a police officer\'s office.'
+    'The officer, who is turned away from you, looks over his shoulder with a puzzled expression.'
+    'However, he quickly grasps the situation as he overhears on his talkie-walkie that a man is hiding within the police station.'
+    'Swiftly, he reaches for his gun on the nearby desk and points it at you. You are promptly arrested' 
+    jump YOULost
+label chair:
+    scene bg police_man_standing_at_the_door with dissolve
+    pause 0.01
+    'The chair didn\'t come to any use because in a matter of seconds a police man opened bruskly the door.'
+    'The policeman handcuffed you with swift precision.'
+    jump Continue4
+label shelf:
+    'As you were moving the shelf a noise was made.'
+    scene bg police_man_standing_at_the_door with dissolve
+    pause 0.01
+    'In a matter of seconds, a policeman burst through the door and handcuffed you so quickly that you had no time to react'
+    jump Continue4
+label roof: 
+    scene bg roof with dissolve
+    pause 0.01 
+    'You reached the roof level but the door to the roof top is closed very well'
+    'As you try to backup you hear police officers yelling'
+    jump caught 
+label YOULost : 
+    scene black
+    pause 1.0
+    scene bg game_over with dissolve
+    pause 2.0
+    scene black with fade
+    return               
+label Conference:
+    scene bg conference_room with dissolve
+    pause 0.01
+    'Check if there\'s another way out of the conference room that might lead you to a safer or more strategic location within the building.'
+    'You don\'t find any'
+   
+    'While you\'re scouting for a hiding spot, such as under the table, the door suddenly swings open and police officers enter the room.'
+    jump caught
+label caught:
+    scene bg policeman_conference_room with dissolve
+    pause 0.01 
+    p 'Stand still, don\'t move you are being arreseted'
+    jump Continue4 
+label dashDoor:
+    scene bg two_police_standing_by_the_door with dissolve
+    pause 0.01          
+    'You make a swift dash toward the door, but unfortunately, two policemen spread their arms wide and catch you forcefully'
+    jump caught
+
+label Standing:     
+    'The lady hangs up and makes a discreet hand signal to a nearby officer.'
+    scene bg nearby_police with dissolve
+    pause 0.01 
+    'You watch, your pulse quickening, as they engage in a brief, hushed conversation, occasionally glancing at a computer screen and then back at you'
+    'The air feels thick as the officer ends the conversation and starts walking towards you with deliberate steps'
+    'While reaching into his back pocket, which appears to contain handcuffs, he says:'
+    scene bg policeTalkingWithyou with dissolve
+    pause 0.01 
+    p 'Hey buddy,  just stay right where you are. I have a few questions for you' 
+    menu:
+        'What are you doing next?'
+        "running out of the station":
+            jump dashDoor 
+        "stay still ":
+            jump StayStill
+label GiveUp: 
+    scene bg keep_trying  with dissolve
+    pause 0.01 
+    'As you give in, a police officer\'s voice cuts through the air, commanding you to get on the ground. With a heavy heart, you comply, dropping to the pavement as instructed.'
+    ' The cold surface presses against your palms as you acknowledge defeat, surrounded by the watchful eyes of bystanders.'
+    'Soon, strong hands pull you up and guide you into the back of a waiting police car'
+    'Soon, strong hands pull you up and guide you into the back of a waiting police car while the click of handcuffs signaling your capture. Groups of people gather, their murmurs blending with the noise of the sirens. '
+    jump YOULost
+
 label choice2:
-label YouLost :  #don't forget return to quit
 
 
+#LAWYER TASK (IBTISSEM) 
 
 
-#LAWYER TASK (IBTISSEM)
-label choice2:
-
-
-    #SECOND CHAPTER
+    #SECOND CHAPTER (kidnap )
 
     scene glitshed
     h "Oh [username] i liked how obedient you were ! You have now successfully completed your first task."
@@ -1143,3 +1296,4 @@ label Invent:
 
 
 return
+
