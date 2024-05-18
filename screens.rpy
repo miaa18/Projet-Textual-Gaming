@@ -215,10 +215,28 @@ screen choice(items):
             textbutton i.caption action i.action at anim_choice_button
 transform anim_choice_button: 
     on hover: 
-        linear 0 zoom 1.15 
+        linear 0 zoom 0.9
     on idle: 
-        linear 0.1 zoom 0.95
-#THE BLOCK ENDS HERE
+        linear 0 zoom 0.75
+        xalign 0.5
+
+style choice_vbox is vbox
+style choice_button is button
+style choice_button_text is button_text
+
+style choice_vbox:
+    xalign 0.5
+    ypos 270
+    yanchor 0.5
+    
+
+    spacing gui.choice_spacing
+
+style choice_button is default:
+    properties gui.button_properties("choice_button")
+
+style choice_button_text is default:
+    properties gui.text_properties("choice_button")
 
 style choice_vbox is vbox
 style choice_button is button
