@@ -205,13 +205,20 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+
+#THIS WILL MAKE THE CHOICES MOVE, CHANGE THE HOVER ZOOM(FOR ZOOM EFFECT) AND LINEAR(FOR RIGHT AND LEFT EFFECT)
 screen choice(items):
     style_prefix "choice"
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
-
+            textbutton i.caption action i.action at anim_choice_button
+transform anim_choice_button: 
+    on hover: 
+        linear 0 zoom 1.15 
+    on idle: 
+        linear 0.1 zoom 0.95
+#THE BLOCK ENDS HERE
 
 style choice_vbox is vbox
 style choice_button is button
@@ -297,7 +304,9 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            imagebutton auto "gui/mm_play_%s.png"  xpos 410 ypos 79 focus_mask True action Start()
+            
+            
 
         else:
 
@@ -305,9 +314,9 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        imagebutton auto "gui/mm_load_%s.png"  xpos 450 ypos 81 focus_mask True action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        imagebutton auto "gui/mm_options_%s.png"  xpos 490 ypos 75 focus_mask True action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,18 +326,18 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+#        textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            imagebutton auto "gui/mm_help_%s.png" xpos 533  ypos 77 focus_mask True action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            imagebutton auto "gui/mm_quit_%s.png" focus_mask True  xpos 568 ypos 75 action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -356,23 +365,22 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+#    #        style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    if gui.show_name:
+    #  if gui.show_name:
 
-        vbox:
-            style "main_menu_vbox"
+    #    vbox:
+    #       style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #        text "[config.name!t]":
+    #            style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #        text "[config.version]":
+    #          style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -471,7 +479,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    #use navigation
 
     textbutton _("Return"):
         style "return_button"
@@ -501,7 +509,7 @@ style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "gui/overlay/game_menu.png"
+    background "gui/overlay/black.png"
 
 style game_menu_navigation_frame:
     xsize 280
@@ -635,20 +643,37 @@ screen file_slots(title):
                     $ slot = i + 1
 
                     button:
-                        action FileAction(slot)
+                        if persistent.saveName:
+                            action If(renpy.get_screen("save"), true=Show("savegameName", accept=FileSave(slot)), false=FileLoad(slot))
+                        else:
+                            action FileAction(slot)
 
-                        has vbox
+                        vbox:
 
-                        add FileScreenshot(slot) xalign 0.5
+                            add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
+                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                                style "slot_time_text"
 
-                        text FileSaveName(slot):
-                            style "slot_name_text"
+                            if FileSaveName(slot):
+                                $ fn = FileSaveName(slot)
+                                if fn and ("-" in fn):
+                                    $ y = fn.split("-")
+                                text fn:
+                                    style "slot_name_text"
 
-                        key "save_delete" action FileDelete(slot)
-
+                            key "save_delete" action FileDelete(slot)                            
+                            ## BadMustard's code optional for delete file button be sure to get the images
+                            if FileLoadable(slot):
+                                imagebutton:
+                                    auto "images/delete/delete_%s.png"
+                                    action FileDelete(slot)
+                                    xalign 1.0
+                                    xoffset 15
+                                    yoffset -85 # 1920x1080  adjust as required
+                                    #yoffset -65 #1280x720  adjust as required
+                                    ## BadMustard's code optional stop just remove if not needed
+                        ## BadMustard's code Stop (first section)
             ## Buttons to access other pages.
             vbox:
                 style_prefix "page"
@@ -674,16 +699,70 @@ screen file_slots(title):
                         textbutton "[page]" action FilePage(page)
 
                     textbutton _(">") action FilePageNext()
+## BadMustard's code Start (second section)
+screen savegameName(accept=NullAction()):
 
-                if config.has_sync:
-                    if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
-                            action UploadSync()
-                            xalign 0.5
-                    else:
-                        textbutton _("Download Sync"):
-                            action DownloadSync()
-                            xalign 0.5
+    modal True
+    add "black" alpha 0.8
+    style_prefix "savegameName"
+
+    frame:
+        has vbox:
+            xalign 0.5
+            spacing 20
+
+        label _("Save Name"):
+            text_color gui.text_color
+            xalign 0.5
+
+        null height 10
+
+        input size 40 color gui.hover_color default store.save_name changed Namer length 22 allow allowedChars:
+            yalign 1.0
+            xalign 0.5
+            xysize (550, 40)
+
+        textbutton _("{glitch}Save the Game {/glitch}"):
+            xalign 0.5
+            keysym ['K_RETURN']
+            action [accept, Hide("savegameName")]
+
+init python:
+    import string
+    def Namer(name):
+        store.save_name = name
+
+# Define characters that can be typed in. We allow:
+# - Uppercase letters (In ascii_letters)
+# - Lowercase letters (In ascii_letters)
+# - Numbers 0 to 9 (In digits)
+# - space, dash
+define allowedChars = string.ascii_letters + string.digits + " -"
+default persistent.saveName = True
+
+style savegameName_frame:
+    padding gui.confirm_frame_borders.padding
+    xsize 650
+    xalign 0.5
+    yalign 0.5
+
+style savegameName_frame:
+    variant "touch"
+    padding gui.confirm_frame_borders.padding
+    xsize 650
+    xalign 0.5
+    yalign 0
+    ypos 50
+## BadMustard's code Stop (second section)
+#                if config.has_sync:
+#                    if CurrentScreenName() == "save":
+#                        textbutton _("Upload Sync"):
+#                            action UploadSync()
+#                            xalign 0.5
+#                   else:
+#                        textbutton _("Download Sync"):
+#                            action DownloadSync()
+#                            xalign 0.5
 
 
 style page_label is gui_label
@@ -726,7 +805,7 @@ style slot_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen preferences():
-
+    add "gui/black.png"
     tag menu
 
     use game_menu(_("Preferences"), scroll="viewport"):
@@ -752,6 +831,12 @@ screen preferences():
                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                vbox:
+                    style_prefix "radio"
+                    label _("Save game names")
+                    textbutton _("Yes") action [SetVariable("persistent.saveName", True), SetVariable("store.save_name", "")]
+                    textbutton _("No") action [SetVariable("persistent.saveName", False), SetVariable("store.save_name", "Un-Named")] #sets a default name, change as required
+                ## BadMustard's code Stop                
                 ## added here, to add additional creator-defined preferences.
 
             null height (4 * gui.pref_spacing)
@@ -991,15 +1076,15 @@ screen help():
                 textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                #if GamepadExists():
+                #    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+            #elif device == "gamepad":
+            #    use gamepad_help
 
 
 screen keyboard_help():
@@ -1076,33 +1161,33 @@ screen mouse_help():
         text _("Rolls forward to later dialogue.")
 
 
-screen gamepad_help():
+#screen gamepad_help():
 
-    hbox:
-        label _("Right Trigger\nA/Bottom Button")
-        text _("Advances dialogue and activates the interface.")
+#    hbox:
+#        label _("Right Trigger\nA/Bottom Button")
+#        text _("Advances dialogue and activates the interface.")
 
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
+#    hbox:
+#        label _("Left Trigger\nLeft Shoulder")
+#        text _("Rolls back to earlier dialogue.")
 
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
+#    hbox:
+#        label _("Right Shoulder")
+#        text _("Rolls forward to later dialogue.")
 
-    hbox:
-        label _("D-Pad, Sticks")
-        text _("Navigate the interface.")
+#    hbox:
+#        label _("D-Pad, Sticks")
+#        text _("Navigate the interface.")
 
-    hbox:
-        label _("Start, Guide, B/Right Button")
-        text _("Accesses the game menu.")
+#    hbox:
+#        label _("Start, Guide, B/Right Button")
+#        text _("Accesses the game menu.")
 
-    hbox:
-        label _("Y/Top Button")
-        text _("Hides the user interface.")
+#    hbox:
+#        label _("Y/Top Button")
+#        text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+#    textbutton _("Calibrate") action GamepadCalibrate()
 
 
 style help_button is gui_button
@@ -1142,6 +1227,7 @@ style help_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
 screen confirm(message, yes_action, no_action):
+    
 
     ## Ensure other screens do not get input while this screen is displayed.
     modal True

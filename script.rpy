@@ -1,11 +1,4 @@
 ﻿
-    #this starts the game 
-    #intro
-    #chapter1
-    #chapter2
-    #chapter3
-    #end
-
 #HERE WE DEFINE THE CHARACTERS
 
 define user=Character("[username]",color="#1613bd")
