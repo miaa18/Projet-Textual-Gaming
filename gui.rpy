@@ -25,7 +25,7 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#610909'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#888888'
@@ -35,7 +35,7 @@ define gui.idle_color = '#888888'
 define gui.idle_small_color = '#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#e60707'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -46,8 +46,8 @@ define gui.insensitive_color = '#8888887f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#003d51'
-define gui.hover_muted_color = '#005b7a'
+define gui.muted_color = '#656667d0'
+define gui.hover_muted_color = '#baaaaa'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#ffffff'
@@ -57,16 +57,16 @@ define gui.interface_text_color = '#6e6a6a'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "Retro Gaming.ttf"
+define gui.text_font = "DJGROSS.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "Retro Gaming.ttf"
+define gui.name_text_font = "DJGROSS.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "Retro Gaming.ttf"
+define gui.interface_text_font = "DJGROSS.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 20
+define gui.text_size = 22
 
 ## The size of character names.
 define gui.name_text_size = 30
@@ -97,7 +97,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 185
+define gui.textbox_height = 164
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -106,7 +106,7 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 240
+define gui.name_xpos = 0.5
 define gui.name_ypos = 0
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
@@ -212,10 +212,20 @@ define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = '#888888'
-define gui.choice_button_text_hover_color = "#ffffff"
+define gui.choice_button_text_hover_color = "#a59191"
 define gui.choice_button_text_insensitive_color = '#8888887f'
 
+screen choice(items):
+    style_prefix "choice"
 
+    vbox:
+        for i in items:
+            textbutton i.caption action i.action at anim_choice_button
+transform anim_choice_button: 
+    on hover: 
+        linear 0.25 zoom 1.25 
+    on idle: 
+        linear 0.25 zoom 1.0
 ## File Slot Buttons ###########################################################
 ##
 ## A file slot button is a special kind of button. It contains a thumbnail
@@ -272,7 +282,7 @@ define gui.pref_button_spacing = 0
 define gui.page_spacing = 0
 
 ## The spacing between file slots.
-define gui.slot_spacing = 10
+define gui.slot_spacing = 12
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 1.0
