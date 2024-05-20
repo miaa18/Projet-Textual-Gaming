@@ -56,7 +56,7 @@ label start:
     "Prepare yourself for a majestic journey unlike any other.."
     "one you never imagined would be yours to live. And who's to say it couldn't happen to you one day!"
     "Whoever doubts... You'll be prepared to confront it by this game.."
-    "But before that let’s get to know you brave user..."
+    "But before that let\'s get to know you brave user..."
     $ username=renpy.input("What's your name?",length=32)
     $ username=username.strip()
     $ username= username.capitalize()
@@ -420,7 +420,7 @@ label KeepRuning:
         'Give up':
             jump GiveUp
 label KeepTrying:
-    scene bg keeptrying with dissolve
+    scene bg keep_trying with dissolve
     pause 0.01 
     'You are surounded and guns are directed at you. Where do you choose to escape this police Besieged?'
     menu: 
@@ -436,14 +436,14 @@ label ArtGallery:
     'Before you can take another step, a searing pain shoots through your knee, sending you crashing to the ground.'
     'The echo of a gunshot fills the hallway, and you realize with horror that you\'ve been hit.'
     'Darkness envelops you as the harsh reality sinks in: your escape attempt has ended in tragedy.'  
-    jump YouLost
+    jump end
 label RunBack:
     scene bg street_people_walk_and_police with dissolve
     pause 0.01 
     'As you frantically run backward, hoping to evade the pursuing officers, you unexpectedly stumble upon a group of additional police officers blocking your path.'
     'Before you can react, one of the officers swiftly grabs your hands, wrenching you off balance and causing you to fall to the ground.'
     'The world spins around you and with one final gasp, you succumb to unconsciousness, the events of the chase fading into oblivion'
-    jump YouLost    
+    jump end    
 
 
 
@@ -619,7 +619,7 @@ label Continue4:
     pause 0.01  
     'You find yourself confined within the stark walls of the interrogation room, the gravity of your situation becoming painfully clear.'
     'With nowhere to escape, you realize you\'ve been caught; the hacker has not only invaded your life but has exposed your deepest secret, turning your world upside down'      
-    jump YouLost
+    jump end 
 
 label HiSir:
     'You tell him all about the hacker and the messages he sent you'
@@ -630,7 +630,7 @@ label next1:
     menu:
         "Exactly":
             jump arrested
-        "Tell him the truth and accept you fate":
+        "Tell him the truth and accept your fate":
             jump arrested
 label arrested:
     p ' Stand up '
@@ -677,7 +677,7 @@ label exitFound:
     'The officer, who is turned away from you, looks over his shoulder with a puzzled expression.'
     'However, he quickly grasps the situation as he overhears on his talkie-walkie that a man is hiding within the police station.'
     'Swiftly, he reaches for his gun on the nearby desk and points it at you. You are promptly arrested' 
-    jump YOULost
+    jump end 
 label chair:
     scene bg police_man_standing_at_the_door with dissolve
     pause 0.01
@@ -695,14 +695,7 @@ label roof:
     pause 0.01 
     'You reached the roof level but the door to the roof top is closed very well'
     'As you try to backup you hear police officers yelling'
-    jump caught 
-label YOULost : 
-    scene black
-    pause 1.0
-    scene bg game_over with dissolve
-    pause 2.0
-    scene black with fade
-    return               
+    jump caught               
 label Conference:
     scene bg conference_room with dissolve
     pause 0.01
@@ -716,6 +709,7 @@ label caught:
     pause 0.01 
     p 'Stand still, don\'t move you are being arreseted'
     jump Continue4 
+
 label dashDoor:
     scene bg two_police_standing_by_the_door with dissolve
     pause 0.01          
@@ -745,7 +739,7 @@ label GiveUp:
     'The cold surface presses against your palms as you acknowledge defeat, surrounded by the watchful eyes of bystanders.'
     'Soon, strong hands pull you up and guide you into the back of a waiting police car'
     'Soon, strong hands pull you up and guide you into the back of a waiting police car while the click of handcuffs signaling your capture. Groups of people gather, their murmurs blending with the noise of the sirens. '
-    jump YOULost
+    jump end 
 
 label choice2:
 
