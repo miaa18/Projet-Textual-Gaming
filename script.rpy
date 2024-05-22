@@ -613,7 +613,7 @@ label WhyArrested:
     'He informs you gravely that you have been implicated in an illegal money transfer originating from a military base. He explains that the station has recently received compelling evidence that links you to the crime.'
     'His voice is stern and the look in his eyes serious as he details the steps that will follow.'
     p'You will be detained at the station, held in custody until a thorough investigation can unravel the truth behind these accusations'
-    jump Continue4
+    jump Continue4 
 label Continue4:
     scene bg interrogation_room with dissolve
     pause 0.01  
