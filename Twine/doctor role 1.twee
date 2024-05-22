@@ -1,0 +1,234 @@
+:: StoryTitle
+doctor role 1
+
+
+:: StoryData
+{
+  "ifid": "1569bc38-4bdb-4e58-a109-26218b6db6d5",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "tag-colors": {
+    "nots": "red"
+  },
+  "zoom": 0.3
+}
+
+
+:: \ 1-Quickly exit the house via the stairs {"position":"1500,2200","size":"100,100"}
+As you stand in front of the doctor's house, your heart races with anticipation and understanding. The weight of the secrets you've uncovered weighs heavily on your mind. You take a deep breath, steeling yourself for the confrontation ahead.
+
+The door cracks open, and Dr. Mark steps out onto the porch, his expression unreadable. You try to maintain a calm facade, masking the turmoil raging inside you. With each passing second, the tension between you grows palpable, like a storm brewing on the horizon.
+For a moment, the doctor noticed that you were waiting for him to say something..
+[[Talk to him]]
+
+
+:: \ Continue {"position":"575,800","size":"100,100"}
+Impatiently, you strained to listen to their conversation, your senses on high alert. but (for a moment, you noticed that the man was the father of the girl who had been tortured by the "past victim!").
+
+The man’s words hinted at(bg:orange)[ something urgent], which made you feel uncomfortable. Mark's demeanor changed, his expression growing tense as he absorbed his old friend's words.]
+[[ Tell the hacker what happened]]
+[[ Wait until Mark comes home]]
+
+
+:: \ Continue\  {"position":"550,1350","size":"100,100"}
+As you awaited Mark's next move, expecting him to head to his bedroom to execute our plan, he surprised you by deviating from the expected path. Instead of going upstairs, Mark disappeared from sight, his movements shrouded in mystery. Intrigued, you monitored his progress through security cameras installed around the mansion. To your astonishment, you watched as Mark descended into the depths of the basement, his determination unwavering as he approached a nondescript door that held an air of secrecy. 
+[[ Go straight in behind him]]
+[[wait a little bit]]
+
+
+:: \ Go check the secret room. {"position":"1400,1600","size":"100,100"}
+As you entered the room, your senses were assaulted by the acrid scent of antiseptic, mingling with an underlying sense of foreboding. Your eyes adjusted to the dim light, revealing rows of gleaming stainless steel instruments and medical equipment lining the walls—a stark contrast to the opulence of the rest of the mansion.. so Mr Mark is a Doctor in real life ! 
+[[Continue  ]]
+
+
+:: \ Go straight in behind him {"position":"200,1500","size":"100,100"}
+As you walked behind Mark, the hacker sent you a message, causing your phone to ring. Unfortunately, Mark heard a sound, prompting him to quickly return upstairs.
+[[ i wait him till he  return ]]<!--Comment Text-->
+
+
+:: \ Tell the hacker what happened {"position":"250,950","size":"100,100"}
+(bg:(gradient: 0, 0,#ffffff,0,#e03131,1,#ffffff))[(align:"=><=")+(box:"X")[What! Oh my God, there's been a change in the plan. You have to go back tomorrow.]] 
+[[Continue ]]
+
+
+:: \ Wait until Mark comes home {"position":"1100,925","size":"100,100"}
+(align:"<==>")+(box:"X")[You wait next to his house, but unfortunately, Mark didn't return. Consequently, you're forced to inform the hacker about everything that happened.]
+
+[[You have to wait for him to send you a text message. ]]
+
+
+:: \ i wait him till he  return\  {"position":"200,1800","size":"100,100"}
+Mark returned, visibly terrified, and rushed downstairs, his face displaying worry and tension.He entered a room that appeared somewhat secret.
+[[ Go check the secret room.]]
+
+
+
+:: \ next day.. {"position":"400,500","size":"100,100"}
+(text-colour:red)[(align:"=><=")+(box:"X")[Message unknown]]
+(align:"<==>")+(box:"X")[Time : (text-colour:lime)[2 AM ]
+Location : (text-colour:lime)[975 Baptist Way, Homestead, FL 33033 ]
+
+[[Following the location]]]
+
+
+:: -Made a screenshot of all the names list {"position":"800,1900","size":"100,100"}
+The doctor returns to the secret room, so you have to choose one from these two choices
+[[ 1-Quickly exit the house via the stairs]]
+[[2-Wait for the doctor to confront him with the truth]]
+
+
+:: 2- Copy all files to flash disk {"position":"1900,1900","size":"100,100"}
+After copying all the files, you hear the doctor enter the room, so you have to choose one of these two choices:
+[[ 1-Quickly exit the house via the stairs]]
+[[2-Wait for the doctor to confront him with the truth]]
+
+
+:: 2-Wait for the doctor to confront him with the truth {"position":"900,2200","size":"100,100"}
+As you wait for the doctor to return, your mind races with questions about the truth behind the secret room and the organ trade.
+You know that confronting the doctor is the only way to uncover the answers you are looking for.
+    Finally, you hear the sound of footsteps approaching, and the doctor is coming. His expression is unreadable, but you sense tension in the air as you prepare to confront him.
+   Dr. Mark What are you doing in my house? How did you manage to enter here?!'... As tension mounts, Dr. Mark tries to inject you with a syringe, but you narrowly evade it. Wait, wait... look, I don't know what I'm doing here. He sent me to kill you. Do you know him?
+    What are you talking about?
+    I'm sure that you have an idea about him, of course you have a lawyer, someone has a daughter... yes, named Henry, and you, he knows all of you.
+    Oh well, you are talking about Mr. Kevin Mitnick. Yes, Henry told me yesterday about him. I know that he's been following me these days... but he will never catch me.
+    Told me about him, please. Well, look the story started in 2010 when he was 15 years old. His mom died and his father accused me of being responsible for her death, so he pursued us legally. What do you mean about 'us'?
+    Yes, they pursued me, and the forensic doctor Henry.
+    My lawyer, John Joh, won the case against them, and we were declared innocent of this accusation.
+    But you know, I know all the truth about you, Mr. Mark.\nYes, that's why you have to die now.
+    After 17 hours, and after your family called 911, finally the police found you dead in Dr. Mark's house.
+    The police found a murder weapon and discovered that the doctor trafficked in human organs, leading to his arrest and imprisonment.
+    After 15 days, the doctor decided to confess to all his crimes and also admitted that the forensic doctor and the lawyer were involved with him.
+
+
+:: Continue {"position":"800,300","size":"100,100"}
+(align:"<==>")+(box:"X")[Our victim for today is an old man who appears to be 58 years old name's mark. He lives in Hooker Town, has a wife and a 17-year-old daughter. His bedroom is on the second floor, and his daughter's room is next to him.]
+[[How can i find him?]]
+
+
+:: Continue\  {"position":"250,1075","size":"100,100"}
+(align:"=><=")+(box:"X")[New Message !!]
+(text-colour:#c2255c)[The plan changed
+Time : Today at 3 AM 
+Location : 975 Baptist Way, Homestead, FL 33033] 
+(align:"=><=")+(box:"X")[[Let's start ]]
+
+
+:: Continue\ \  {"position":"1400,1800","size":"100,100"}
+(align:"<==>")+(box:"X")[You cautiously accessed the laptop's (text-colour:#f03e3e)[secret files], discovering a meticulously organized collection detailing Dr. Mark's illicit activities. Among them was a file labeled (text-colour:#f03e3e)["Operations"] which revealed a (text-colour:#f03e3e)[horrifying list of victims who had been deprived of organs] or had perished due to Dr. Mark's actions. (text-colour:#f03e3e)[Shock] and outrage consumed you as you grasped the extent of his depravity, realizing innocent lives had been irreversibly altered to serve his twisted ambitions.
+[[-Made a screenshot of all the names list]]
+[[2- Copy all files to flash disk]]
+
+
+:: Following the location {"position":"600,600","size":"100,100"}
+ As you stealthily followed Mark's car through the dimly lit streets, your focus remained sharp, every step calculated to avoid detection.(bg:orange)[Suddenly, a familiar figure] appeared from the shadows—an old friend of Mark's name's Henry. Your pulse quickened when you noticed the interaction, your curiosity piqued by the urgency of the man's demeanor.
+[[ Continue]]
+
+
+
+:: Go search for him {"position":"1300,2700","size":"100,100"}
+After 5 hours, I finally found where Kevin living in When you were near his house, you received a phone call... It was the hacker!
+    Hello, what's the news? I was waiting for you to send me the pictures. Why you didn't finish the task ? Because I finally know who you are. So, open the door.
+    Yes as you see i'm here Mr KEVIN_MITNICK and i know what are you trying to do
+    Oh comme on how you find me,i tried  to don't leave any trace on me
+    I admit that my choice was the most appropriate  Look, this is no time to joke around because the people you think you have the power to take down are more dangerous than you think.
+    What danger are you talking about? You don't know anything about me or what I'm doing.\n No, I know everything. I know about your mother.
+    Mom!!!   Yes, your mom. I know that Mr. 'Mark' is a doctor, Mr. 'Henry' is a forensic doctor, and Mr. 'John' is a lawyer in your mother's murder case.
+    Yes,of course, he probably lied to you. But wait, how did he let you go after he found you sneaking into his house?
+    [[Tell him the truth of the doctor]]
+
+
+:: How can i find him? {"position":"575,425","size":"100,100"}
+(align:"<==>")+(box:"X")[when i send you the location ,you start the quiet hour of(text-colour:purple)[ 2 am], taking advantage of the cover of darkness. Allow excitement to build as you prepare for the task ahead, recognizing that his day off will be devoted to this important mission. Identify his vehicle by its (text-colour:purple)[white] license plate with the code (text-colour:purple)["REJ-256."] Ensure that all preparations are complete for the operation to start smoothly in the early hours of the morning.]
+[[ next day..]]
+
+
+:: Let's start {"position":"825,1175","size":"100,100"}
+After following Mr. Mark, you arrived at his mansion, your anticipation palpable as you approached the imposing gates. You steadied yourself and entered the grand entrance hall, nerves and determination driving you forward. Every creak of the floor heightened your awareness as you made your way to Mark's study. With resolve, you pushed open the door, keenly attuned to the charged atmosphere within.
+
+ [[ Continue ]]
+
+
+:: Let's start\  {"position":"600,1200","size":"100,100"}
+After following Mr. Mark, you arrived at his house, your anticipation palpable as you approached the imposing gates. You steadied yourself and entered the grand entrance hall, nerves and determination driving you forward. Every creak of the floor heightened your awareness as you made your way to Mark's study. With resolve, you pushed open the door, keenly attuned to the charged atmosphere within.
+
+ [[ Continue ]]
+ 
+
+
+:: Search_for_hacker {"position":"1700,2600","size":"100,100"}
+Information the doctor said about the hacker:
+    Name: KEVIN_MITNICK
+    Age: 29 years old
+    He is a hacker
+    The doctor involved in the murder of his mother.
+    
+    After 5 hours, I finally found where Kevin living in
+    When you were near his house, you received a phone call... It was the hacker!
+   Hello, what's the news? I was waiting for you to send me the pictures. Why you didn't finish the task ?
+    Because I finally know who you are. So, open the door.
+    Yes as you see i'm here and i know what are you trying to do, what is your plan?
+   oh comme on how you find me ,i tried not to leave a trace on me
+    I admit that my choice was the most appropriate
+    Look, this is no time to joke around because the people you think you have the power to take down are more dangerous than you think.
+    [[Go search for him]]
+
+
+:: Talk to him {"position":"1250,2475","size":"100,100"}
+Good evening, Dr. Mark, I hope I'm not disturbing you.
+    I just need to ask you something important. Have you received any threats recently? Is there anyone who might want to harm you?
+    Dr. Mark's expression shifts from surprise to suspicion as he regards you intently.'What? Who are you?' he demands,
+    his tone laced with caution.'And why are you asking me this question at this time... and in this manner?'
+   I apologize for the abruptness of my inquiry, you reply, choosing your words carefully.
+    I want to tell you that someone sent me to kill you and I want to know who this person is, don't worry I'm not here to hurt you 
+    But I have reason to believe that your safety may be at risk. Please, Dr. Mark, if there's anything you know or anyone you suspect, it's imperative that you share it with me.
+    You know you must tread carefully, for the truth may be far more dangerous than you realize.
+    But for a moment, the doctor remembers what the forensic doctor said to him the last day... So without thinking, he blurts out: 'Oh, so you're talking about Mr.KEVIN_MITNICK!
+   MR.KEVIN MITNICK ?? YOU'VE NEVER HEARD A NAME LIKE THIS BEFORE!
+    maybe this man could be the hacker ,you need more informations about him , this criminal doctor must be punished for his crimes
+    Can you tell me who KEVIN_MITNICK is?
+   Look at me, the story started in 2010, when he was 15 years old. His mom died and his father accused me of being responsible for her death, so he pursued us legally.
+    What do you mean about 'us'?
+    Yes, they pursued me,and the forensic doctor.
+    My lawyer won the case against them, and we were declared innocent of this accusation."
+    So i am not, and I will not be afraid of him or his family. Let him do what he wants, and we will see who has the power between us.
+    I am not and I will not be afraid of him or his family, let him do what he wants and we will see who has the power between us.
+    So you realize that this criminal doctor is the leader of a dangerous organization you have to be more carful"
+    menu:
+ [[Search_for_hacker]]
+
+
+:: Tell him the truth of the doctor {"position":"1500,2950","size":"100,100"}
+Before I tell you the truth about everything, you have to promise something first...
+ What do you mean about the truth? If there's a truth, then it's me who should tell it to you.
+    Okay, so tell me.
+    I don't know what exactly the doctor told you, but the real thing that you have to know is this: the doctor killed my mother because of a medical error during surgery.
+    When he refused to confess, a case was filed against him and the forensic doctor who was with him. However, the lawyer managed to secure their acquittal through bribery
+    So, this is the reason for doing all these tasks, and in the end, you failed to have the doctor punished for his crime.
+    You open your laptop and show him all the pictures and files you found in the secret room.
+    Yes, Mr. Kevin Mitnick, as you can see, this doctor is a criminal who traffics in people's organs.I found this secret operations room in his house. I have all the evidence that proves the crimes of this criminal doctor, including the file of the forensic doctor who was involved with him.
+    How?! I can't believe it! I never knew any of this about him. The only thing I know is that he killed my mother due to a medical error during surgery.
+    Look, Mr.Kevin Mitnick, we can cooperate and eliminate them because the police will definitely be able to catch them this time. However, there's a condition: you have to forget about the 200 million stolen cash in my bank accounts.
+    I'm really shocked about all of this..but as you said, this is the only way to make this criminal and everyone who was involved with him pay the price for their crimes. You and I can't hold them accountable on our own..
+    "We must cooperate with the police"
+    "HELLO 911 ?
+
+
+:: Untitled Passage {"position":"575,175","size":"100,100"}
+ (text-colour:#e03131)[Hey again, let's make this your final task—no need to fret, just grind hard and get it done.]
+[[Continue]]
+
+
+
+
+:: You have to wait for him to send you a text message.\  {"position":"1100,1050","size":"100,100"}
+(align:"=><=")+(box:"X")[New Message !!]
+(text-colour:#c2255c)[The plan changed
+Time : Today at 3 AM 
+Location : 975 Baptist Way, Homestead, FL 33033] 
+(align:"=><=")+(box:"X")[[Let's start]]
+
+
+
+:: wait a little bit {"position":"800,1500","size":"100,100"}
+As you monitored the flickering light of the computer screen, a sudden interruption occurred when you glimpsed Mark's daughter returning home, her cheerful voice echoing through the mansion's halls. Reacting swiftly, Mark abandoned his exploration of the secret room to intercept his daughter, ensuring his clandestine activities remained concealed from her curious gaze with practiced stealth.
+[[ Go check the secret room.]]
