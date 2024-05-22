@@ -1,0 +1,528 @@
+:: StoryTitle
+7Days
+
+
+:: StoryData
+{
+  "ifid": "E246F553-4FFD-4F63-8A72-6A665B4D9B47",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": " o",
+  "zoom": 0.6
+}
+
+
+:: \\  {"position":"300,1125","size":"100,100"}
+Internal Monologue: "Man, I'm in deep trouble here. It's like I've fallen into a pit and the more I try to climb out, the further I slide down. Gotta figure a way out of this mess before it swallows me whole..."
+
+[[ continue -> m]]
+
+
+:: \ , {"position":"2300,250","size":"100,100"}
+You arrive at the prestigious Law Firm downtown
+
+[[Describe it]]
+[[Enter the building]]
+
+
+
+:: \ ? {"position":"5850,275","size":"100,100"}
+You look down at the subdued Judy, your voice low but firm. "Not a word of what happened here leaves this room," you warn. "Because if you don't comply, everything I just uncovered will go public - and you'll be right in the middle of the fallout."
+
+you regain your calm and look through the window ....
+[[continue -> end]]
+
+
+:: \ Ask to use the restroom, and secretly drop the sedative into Krysa's coffee thermos while alone. {"position":"2950,900","size":"100,100"}
+You choose to excuse yourself and head to the bathroom. As Krysa momentarily loses focus and begins to sift through some papers, you take advantage of the opportunity to discreetly slip the sedative into his coffee.
+
+[[continue ->go]]
+
+
+:: \ Be straight with Judy - tell her Krysa is feeling ill and needs privacy {"position":"3700,200","size":"100,100"}
+As you crack open the door, she's already standing there with a concerned look on her face.
+
+"Ah Judy, apologies for the noise. Mr. Krysa is feeling quite unwell, it seems that he overworked himself " you say, putting on your best concerned expression. "He's just...resting at the moment. we will resume our buisness shortly, he told me to tell you to take the afternoon off and cancel all his other clients"
+
+[[ continue ->inetrested]]
+
+
+:: \ Take a big risk and just lock her out while you work {"position":"3675,400","size":"100,100"}
+In a moment of panic, you grab a heavy book and wedge it against the office door handle just as Judy tries to barge in
+"Mr. Krysa? Why is this locked?" she demands, rattling the knob aggressively. "Open up right now!"
+You back away, realizing your grave mistake. Judy won't simply give up and there's no way out.
+
+[[Try to reason with Judy ]]
+
+[[Subdue Judy if she gets through]]
+
+
+:: \ b {"position":"500,725","size":"100,100"}
+Damn it all, if I don’t do what he says, I'll lose you guys. I'd rather bite the bullet than have that...
+[[continue -> k]]
+
+
+:: \ end {"position":"5975,700","size":"100,100"}
+"I'll hunt you down, no matter what it takes, Just you wait" you declare with unwavering resolve, the intensity of your determination echoing through the silent room.
+
+END OF CHAPTER 1
+
+
+:: \ f {"position":"2075,575","size":"100,100"}
+He's offering to help? Hmm ... Perhaps I should keep that in mind.
+[[continue -> q]]
+
+
+:: \ ff {"position":"4600,300","size":"100,100"}
+you proceed to tear apart the mechanism, to find out stack of files ...
+Internal Monologue " 
+They all relate to a certain Hospital case,
+i should probably keep them on me,
+i feel like they are going to be important"
+
+
+:: \ further Explore the office {"position":"5275,475","size":"100,100"}
+Internal Monologue: "Seeing what I've seen here, it's clear I need to investigate this office more thoroughly."
+
+[[Photo frame]]
+[[Medals and prizes]]
+
+
+:: \ i {"position":"775,650","size":"100,100"}
+First Task: Swipe 200 grand from the target at this exact location: 2207 Oak Street, Apartment 91, Unit 1.
+
+[[ continue ->;]]
+
+
+:: \ k {"position":"675,1050","size":"100,100"}
+Birds chirping wake you abruptly. Startled, you grope for your phone.
+
+6:50 AM. Ten minutes until the nightmare starts.
+
+You shuffle to your computer, setting it up for the day.
+
+Suddenly, the screen flickers and a terminal pops up, displaying:
+
+ [[continue -> i]]
+
+
+
+:: \ l {"position":"1625,175","size":"100,100"}
+"I need help with my divorce case."
+"Alright, we have an opening at 11 AM. Is that convenient for you?"
+"Yeah, sounds good. See you then."
+you hang up
+[[continue ->6]]
+
+
+:: \ m {"position":"300,250","size":"100,100"}
+You're jolted awake by creaking noises
+heart pounding .... only to see your son standing there, looking at you with concern.
+
+Son: "Hey, Dad! Dinner's ready, come on down! Mom made your favorite."
+
+You rub your eyes, trying to shake off the tension. "Um, yeah, I'm okay. Just not feeling hungry right now. You guys go ahead and eat without me."
+
+Son: "Sure thing. But seriously, are you alright? You look kinda rough."
+
+You force a smile. "Yeah, just a bit tired, that's all."
+
+You hear the soft click of the door closing as your son leaves the room, leaving you alone with your thoughts.
+[[continue -> b]]
+
+
+:: \ o {"position":"1250,850","size":"100,100"}
+
+"Noted. What can I assist you with?"
+
+ [[continue -> l]]
+
+
+
+:: \ p {"position":"2300,950","size":"100,100"}
+internal Monologue:"What's with this psycho now? Seriously, I'm tired of trying to figure out his messed-up plans ..."
+[[continue -> q]]
+
+
+:: \ q {"position":"2150,375","size":"100,100"}
+You look up the time, it's nearing 10 AM, you should get going ...
+[[continue -> ,]]
+
+
+:: 6 {"position":"1625,400","size":"100,100"}
+Alright, I've got some time to kill. What should I do next?
+
+[[Disguise yourself]]
+[[Try to contact the hacker to give you more info]]
+
+
+:: ; {"position":"925,650","size":"100,100"}
+Your doorbell rings, jolting you with anxiety. Peeking through the peephole, you see no one. But there's a small package on your doorstep. You open it to find a flash drive.
+
+Internal Monologue: "This must be it, the key to swiping the cash," you whisper, nerves buzzing ..
+
+[[continue ->ddd]]
+
+
+:: Ask for the hacker help to acces the lawyer digital money wallet {"position":"5275,650","size":"100,100"}
+As you make the call to the hacker's burner number, an automated robotic message instructs you to insert the USB drive into the lawyer's laptop. With a sense of resignation, you comply, and a terminal window promptly opens up.
+
+"Thank you for your hard work," reads the stark message on the screen. "The money will be delivered straight to your account."
+
+[[continue ->fff]]
+
+
+
+:: Describe it {"position":"2450,575","size":"100,100"}
+ the law firm's glass façade stands as a symbol of modernity, its sleek lines and towering presence a testament to progress. Yet, as you enter the lobby, a different narrative unfolds. The marble floors, adorned with intricate patterns, harken back to a bygone era of tradition and sophistication. Contemporary art pieces adorn the walls, juxtaposing the old-world charm with a touch of innovation. It's a seamless fusion of the past and the present, where tradition meets modernity in perfect harmony
+
+
+
+
+
+
+
+
+
+:: Disguise yourself {"position":"1075,400","size":"100,100"}
+You scrutinize yourself in the mirror. With glasses, a wig, gloves, and makeup, you've crafted a whole new look. It's like your theater days are finally paying off. Feeling pretty slick, you're confident you can slip by unnoticed.
+
+
+:: Enter the building {"position":"2500,200","size":"100,100"}
+As you entered, the receptionist buzzed you through after confirming your appointment with the firm's star lawyer, Michael Krysa. Judy, a prim middle-aged woman with her greying hair pulled back tightly, greets you in the waiting room.
+
+[[continue ->v]]
+
+
+:: F {"position":"4675,650","size":"100,100"}
+Dear Michael,
+Regarding the Brown vs. Central Hospital case, your efforts are crucial to our institution. We're committed to compensating you appropriately. In addition to the agreed $100,000 upon settlement, I'm authorizing an extra $25,000 payment upon optimal case resolution. This compensation will be discreetly transferred from our offshore accounts. Marlene from accounting will provide the details. Your counsel has been invaluable.
+
+Thank you,
+Jonathan Blankenship
+CEO, Central Hospital
+[[continue ->lgg]]
+
+
+:: Fake a coughing fit to distract Krysa while you spike his coffee {"position":"2975,650","size":"100,100"}
+You decide to simulate a severe coughing fit, and surprisingly, it succeeds! Krysa appears momentarily distracted from his usual focused demeanor as he checks on you. Seizing the opportunity, you discreetly slip the sedative into his coffee, then apologize for the inconvenience 
+[[continue ->go]]
+
+
+:: Fg {"position":"5125,700","size":"100,100"}
+So the lawyer has been taking bribes from the the director to lose his cases ??! This is insane, why would the hospital go this far to win ?
+you look through the other files and you notice a similar pattern
+[[ continue ->yyy]]
+
+
+
+:: Hi Judy, I'd like to request your services. {"position":"1075,250","size":"100,100"}
+Sure, sir. May I have your name for scheduling purposes?
+[[Tell a lie]]
+[[Tell the truth]]
+
+
+:: Hi Judy, I'm interested in learning more about the attorneys in your firm. {"position":"1325,1150","size":"100,100"}
+That would be Mr. Krysa he is a qualified attorney at law, with 10 years of court experience, and a stellar record, I’m sure you’re going to find him very satisfying
+
+
+:: How do i take the money ? {"position":"2450,825","size":"100,100"}
+"You bagged 200 million, yet you're still struggling? Seriously? Ugh, you're killing me... If you ever need a hand with that, I've got your back when the time comes. I'm not that cold-hearted, you know. LOL"
+[[continue -> f]]
+
+
+:: Lie {"position":"3275,550","size":"100,100"}
+Internal Monologue: "Uh oh, busted. Why do I trust him even less than the hacker? Maybe I should lie and come up with a convincing story..."
+
+You attempt to spin a believable tale, but Krysa catches on quickly, calling out your lies 
+[[continue ->kk]]
+
+
+
+
+
+:: Look in the computer {"position":"4300,675","size":"100,100"}
+A sleek-looking computer sits atop the desk, but it's locked by a password. Internal Monologue: "Damn it, I didn't come here for nothing. I need to find that password." As you search through the papers, you come across a post-it note. You read it, and it says, "in case I forget.
+
+10 15 8 14
+"
+[[continue ->you find out the password]]
+
+
+:: Look inside the desk {"position":"4425,150","size":"100,100"}
+Your gaze is immediately drawn to the large, imposing oak desk that serves as the room's centerpiece. Stacks of files and papers are scattered in its surface, blanketed by a variety of office supplies and lawyers' knickknacks
+[[continue ->llp]]
+
+
+:: Look through the files {"position":"4550,50","size":"100,100"}
+Towering file cabinets and overflowing boxes of documents cover the walls, seemingly full of potential leads. Going through all the paper trails could unearth a treasure trove of information, but it also appears incredibly time-consuming to sift through it all, you try to search for any clues, but you come up short-handed ...
+
+
+:: Medals and prizes {"position":"5450,300","size":"100,100"}
+At the center of it all, proudly displayed, were shiny Public service awards, Legal industry recognitions, and Academic honors. With a portfolio gleaming with these accolades, it's no wonder Mr. Lawyer here could sweep a few bad cases under the rug. He seemed to have it all together, but I guess perfection isn't always what it seems.
+
+
+:: Photo frame {"position":"5500,450","size":"100,100"}
+You stumble upon a photo frame displaying the lawyer in fishing gear with his smiling son. As you hold it, memories of your own son flood your mind, reminding you of the high stakes involved.
+
+Internal Monologue: "This guy's situation is eerily similar to mine. Is this why that guy chose me? Is it retribution for the stolen money I got? He sees this lawyer and me as one, playing with our lives to fulfill some twisted justice fantasy," you seethe
+
+
+:: Read More On The Case {"position":"4925,500","size":"100,100"}
+Case File: Mr. Brown vs. Central Hospital
+
+Plaintiff: Mr. Brown
+
+Defendant: Central Hospital
+
+Allegation: Mr. Brown accuses Central Hospital of concealing the cause of his late mother, Mrs. Sarah Brown's death, claiming malpractice.
+
+Attorney for Mr. Brown: Michael Krysa
+
+Result: Victory for Central Hospital - Found Innocent
+
+Summary:
+
+Despite Attorney Michael Krysa's efforts, representing Mr. Brown, the case against Central Hospital lacked substantial evidence. Witnesses' testimonies failed to sway the court, resulting in Central Hospital's victory. The defense's weak stance and Krysa's inability to provide convincing arguments ultimately led to the hospital's exoneration.Case File: Mr. Brown vs. Central Hospital
+
+[[continue ->Fg]]
+
+
+:: Risk it and Quickly spike Krysa's coffee mug when he turns away {"position":"2750,475","size":"100,100"}
+As you try to stealthily slip the sedative into his coffee, your actions are swiftly noticed by Krysa, who grabs your hand firmly.
+"Mr. [Last Name], I have a finger on the button directly linked to the local police. Any move, and I will press it," he warns, his tone oozing confidence and amusement. "And it seems you have some very incriminating evidence in your possession. Now, spill it. Who sent you and what do you need from me?"
+[[Lie]]
+[[Tell him everything]]
+
+
+:: Subdue Judy if she gets through {"position":"3425,550","size":"100,100"}
+Realizing reasoning with Judy is futile, you brace yourself as she tries to force open the barricaded door. The moment it cracks open, you lunge forward and tackle Judy to the ground.
+Keeping her restrained with one arm, you quickly grab a roll of duct tape from Wright's desk drawer. You tear off a strip with your teeth and bind Judy's wrists and ankles, immobilizing her. Only then do you remove your hand from her mouth
+
+[[continue ->find it]]
+
+
+:: Tell a lie {"position":"1425,25","size":"100,100"}
+"Certainly, my name is umm... Michael. Michael Jones."
+
+Internal Monologue: "Ah, I can't go around telling her my real name."
+
+[[continue -> o]]
+
+
+:: Tell him everything {"position":"3275,725","size":"100,100"}
+Internal Monologue: Screw it, there's no way I'm getting out of this alone. I should just spill everything.
+
+...
+
+"So, that's how it is. It's hard to believe a hacker's after me, but I'll admit, you seem straight with me. And trust me, I know a liar when I see one. Now that we're in this together, I need your help figuring out how to handle it."
+
+
+:: Tell the truth {"position":"1650,975","size":"100,100"}
+"Certainly, my name's [real name]."
+
+Internal Monologue: "Maybe I shouldn't have told her my real name...Oh well, No point crying over spilled milk."
+
+[[continue -> o]]
+
+
+:: Try to contact the hacker to give you more info {"position":"1625,650","size":"100,100"}
+You hover over the keys, uncertain of what to ask, you write 
+"I have a couple of questions about the task ..."
+Then, the screen flickers,
+
+H: "Haha, bring it on. What do you wanna know ? You are only allowed one question though " 
+
+[[How do i take the money ?]]
+[[What if i get caught ?]]
+[[what do you need the money for ?]]
+
+
+
+:: Try to reason with Judy\  {"position":"3875,150","size":"100,100"}
+Thinking quickly, you realize deceiving Judy one last time may be your best chance to get her away from the office door before she calls for backup.
+You take a deep breath and shout back through the door in your most authoritative tone. "Judy! Listen very carefully - there's been a misunderstanding, but everything is under control."
+The pounding momentarily stops as she pauses. "A misunderstanding? What are you talking about? Open this door right now!"
+"I can't do that just yet," you reply calmly. "But I can explain if you step away and return to your desk."
+There's a tense silence before Judy responds skeptically. "And why exactly should I trust a single word you say right now?"
+[[continue ->kk]]
+
+
+:: Untitled Passage {"position":"175,625","size":"100,100"}
+Feeling a sense of impending doom, you slip into bed, pondering your next move in the face of the looming threat...
+
+[[ continue -> ]]
+
+
+:: What if i get caught ? {"position":"2450,75","size":"100,100"}
+H: LOL, that's on you, buddy. But hey, remember, if I end up in cuffs, it's not just me you should worry about. Say goodbye to your precious family...
+
+[[ continue ->s]]
+
+
+:: bn {"position":"3000,175","size":"100,100"}
+You clear your throat, weaving your fake backstory while discreetly retrieving the small vial of sedative from your jacket pocket...
+
+[[Fake a coughing fit to distract Krysa while you spike his coffee]]
+
+[[Risk it and Quickly spike Krysa's coffee mug when he turns away]]
+
+
+
+:: d {"position":"3925,975","size":"100,100"}
+H:
+Seems like he dropped the ball. Shame... I had high hopes for this one. But hey, it's all good. Plenty more where he came from. Goodbye.
+
+
+
+:: ddd {"position":"1075,650","size":"100,100"}
+You breathe a sigh of relief; the first task wasn't as daunting as you anticipated. Quickly, you plug the address into your map app.
+
+It directs you to a law firm named "Justice and Order & Co." 
+Now, why would this guy have anything to do with a firm like that...
+
+[[continue ->t]]
+
+
+:: do {"position":"3425,175","size":"100,100"}
+You prop Krysa's head up on his arm, trying to make him look like he is just resting. As you head for the door, you hear Judy's voice.
+I should act swiftly, i can't let Judy know what happened here
+
+[[ Be straight with Judy - tell her Krysa is feeling ill and needs privacy]] 
+
+[[ Take a big risk and just lock her out while you work]]
+
+
+:: fff {"position":"5700,725","size":"100,100"}
+With a bitter taste of revulsion lingering in your mouth, you power down the laptop and cast a final, piercing gaze around the office.
+(if: $choice is 1)[
+[[Continue -> ?]]
+](else:)[
+[[Continue -> end]]
+]
+
+
+:: find it {"position":"3425,900","size":"100,100"}
+"What have you done?" she hisses venomously. "When Mr. Wright finds out about this..."
+"Wright's not going to find out anything," you cut her off grimly.
+(set:$choice to 1)
+[[continue->ll]]
+
+
+:: go {"position":"3325,325","size":"100,100"}
+you watch cautiously as he takes a long sip. At first, he continues discussing the case normally. But soon his words begin to slur, and his eyelids grow heavy as the powerful sedative takes effect.
+
+Within moments, Krysa's head drops and he slumps forward unconscious on his desk, knocking down a crystal figurine that was sitting on the side of the table.
+
+[[continue ->run]]
+
+
+:: inetrested {"position":"3700,825","size":"100,100"}
+Judy purses her lips, hesitating as she glances over your shoulder at Krysa slumped over his desk. "Well...if you're quite sure. I did hear some crashing though..."
+
+You wave your hand dismissively. "Just Mr. Krysa knocking over a few things in his delirious state. Truly, you'd be doing him a favor by clearing out so he can recover in peace."
+
+"I...oh, very well then," Judy finally relents. "I'll let the other paralegals know not to disturb this afternoon. You'll ring if you need anything else?"
+
+"But of course. Thank you for your understanding, Judy," 
+[[continue ->ll]]
+
+
+:: kk {"position":"4100,450","size":"100,100"}
+Out of options and excuses, you can only wait helplessly. Soon, the sound of sirens fills the air as multiple police cars screech to a halt outside the building.
+
+Heavy footsteps thunder up the stairwell as a gruff voice bellows for you to exit with your hands up. You have no choice but to comply as the door is bashed open and a flood of officers bursts inside, weapons drawn.
+
+Within moments, you're forced to the ground and handcuffed as Krysa's office is swarmed. Judy watches with a mix of anger and grim satisfaction as you're roughly hauled away, the terrible consequences of your actions finally catching up to you.
+[[continue ->d]]
+
+
+:: lgg {"position":"4900,750","size":"100,100"}
+This is intresting. The lawyer has been receiving secret offshore payments? I wonder what this is all about. I need to delve deeper into the Brown vs. Central Hospital case. I recall seeing some information about it in the hidden folders...
+
+[[Read More On The Case]]
+
+
+:: ll {"position":"4000,300","size":"100,100"}
+With Judy placated,  you turn your attention back to the important matter at hand - searching Krysa's office for any relation to the hacker, and completing the task...
+
+[[continue->rr]]
+
+
+:: llp {"position":"4425,325","size":"100,100"}
+As you searched through the drawers in a last-ditch effort, your hopes dwindled as you found nothing.
+Disheartened, you were about to close the drawer when an idea struck you.
+You began knocking on the bottom of the drawer, and bingo,  a hollow sound resonated. There must be a false bottom! 
+[[continue -> ff]]
+
+
+:: rr {"position":"4175,100","size":"100,100"}
+The cluttered space feels intimidatingly vast as you stand alone, the weight of the opportunity bearing down. You'll need to thoroughly comb through everything, but also work efficiently before your window closes. The question is - where to start?
+
+[[Look through the files]]
+[[Look inside the desk]]
+[[Look in the computer]]
+
+
+:: run {"position":"3200,175","size":"100,100"}
+You freeze, listening carefully for any sounds of Judy the secretary in the outer office area.
+"Everything okay in there?" Judy's muffled voice calls out from the front office.
+
+[[continue ->do]]
+
+
+:: s {"position":"1825,175","size":"100,100"}
+You lean back in your chair, a knot of unease forming in your stomach. Maybe you shouldn't have asked him this, you think to yourself, feeling the weight of his response bearing down on you.
+[[continue -> q]]
+
+
+:: subdue {"position":"3000,425","size":"100,100"}
+"Take a seat," Krysa says, rising from behind his oversized desk. He exudes a rat-like energy, with a silver tongue that can charm or bite as needed.
+"I understand you need my expertise in divorce settlements," Krysa says as he sits back down. "Lay it out for me."
+
+[[continue ->bn]]
+
+
+:: t {"position":"2050,1075","size":"100,100"}
+You dial the firm's number, and an elderly female voice answers, "Hello, this is Judy from Justice and Order office. How can I be of any help?"
+  
+  [[Hi Judy, I'm interested in learning more about the attorneys in your firm.]]
+  [[Hi Judy, I'd like to request your services.]]
+  
+
+
+:: v {"position":"2575,350","size":"100,100"}
+"Follow me," Judy says briskly, gesturing down the hallway. Her icy demeanor and sharp gaze leave no room for doubt – she means business.
+Judy escorts you into Krysa's corner office – a testament to his success. The elegant wood decor, impressive degrees adorning the walls, and the panoramic view of the city park all scream "Success." But for some reason it all seemed Shallow ...
+[[continue ->subdue]]
+
+
+:: what do you need the money for ? {"position":"1850,575","size":"100,100"}
+"Hmm, normally I wouldn't respond, but hey, since it's relevant to your tasks, I'm feeling generous. Listen up. You'll need that money for your next task to win over someone crucial, so don't screw it up, okay? Enough spoilers for now, but remember, failure isn't an option here."
+
+[[continue -> p]]
+
+
+:: you find out the password {"position":"4500,650","size":"100,100"}
+Alright, access granted. Let's uncover his secrets. The email app grabs your attention. Internal Monologue: "It all began with that shady email. Let's hope this one holds the key for my freedom." You sift through the emails until you stumble upon a lengthy discussion thread. Internal Monologue: "Fascinating."
+
+[[continue ->F]]
+
+
+:: yyy {"position":"5125,450","size":"100,100"}
+Something very wrong is happening within this hospital
+And what's most chilling is the implication that the hospital's central leadership is actively concealing these incidents to avoid lawsuits and public scrutiny.
+what should i do next ?
+
+[[Ask for the hacker help to acces the lawyer digital money wallet]]
+[[ further Explore the office]]
+
+
+:: StoryStylesheet [stylesheet]
+tw-passage {
+   text-align: left; 
+  font-size: 4vh;
+  font-size: 4vw;
+  font-size: 4vmin;
+  line-height: normal;
+}
