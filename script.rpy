@@ -581,7 +581,9 @@ label KeepRuning:
 label KeepTrying:
     scene bg keep_trying with dissolve
     pause 0.01 
+    play sound "police.mp3"
     'You are surounded and guns are directed at you.'
+    stop sound
     menu: 
         "Where do you choose to escape this police Besieged?"
         'You rush into the building to your left':
@@ -1111,6 +1113,8 @@ label service:
             jump TheLie
 
 
+
+
     label theTruth:               
         user "Certainly, my name is [username]"
         pause 0.2
@@ -1423,7 +1427,9 @@ label waitM:
     "But just as you start to relax, you hear the distant wail of police sirens."
 
     "Your blood runs cold as the realization hits you. Krysa betrayed you."
-    "You jump to your feet, but it's too late. The door bursts open, and police officers flood into the room."
+    "You jump to your feet, but it's too late."
+    scene bg police
+    "The door bursts open, and police officers flood into the room."
 
     "They arrest you on charges of conspiracy and attempted sabotage, reading you your rights as you're handcuffed."
 
@@ -1585,8 +1591,7 @@ menu menu5:
             "A sleek-looking computer sits atop the desk "
             "You notice security footage as well as clients registry forms"
             user"Might as well delete these"
-            if truth == 10 :
-                "At least i can remove my name and fix my mistake from earlier"
+            "At least i can remove my name and fix my mistake from earlier"
             user"Now what should i do"
             jump menu5
 
@@ -1714,8 +1719,6 @@ label money:
         "you go into a public restroom"
         "and get rid of the make up and clothes"
         user "like nothing happened.."
-
-
 #SECOND CHAPTER AMIRA
 
 "You return home"
@@ -2907,6 +2910,11 @@ label QuestionTHEM:
             jump wedotheillegal
         'Who is the individual you are referring to?':
             jump TheTRUTH
+
+label TheTRUTH: 
+    m 'Elliot Delrson'
+    m 'Did he sent you to kill us?'
+    jump ElliotSentMe
         
 
 label wedotheillegal:
@@ -2952,7 +2960,7 @@ label InfoAboutHacker:
     " would you listen to them or kill them?"
     menu:
         "listen to them":
-            jump listen1
+            jump ElliotSentMe
         "kill them":
             jump killBothOfThem
 
@@ -3136,6 +3144,7 @@ label fin:
     "You get back to your ordinary happy life, and Eliott seems to have founded a new life for himself as well"
     centered "GOOD END"
     centered "NEVER CLICK ON A LINK YOU DON'T KNOW AGAIN !"
+    return
 
 
 
