@@ -238,24 +238,6 @@ style choice_button is default:
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
 
-style choice_vbox is vbox
-style choice_button is button
-style choice_button_text is button_text
-
-style choice_vbox:
-    xalign 0.5
-    ypos 270
-    yanchor 0.5
-
-    spacing gui.choice_spacing
-
-style choice_button is default:
-    properties gui.button_properties("choice_button")
-
-style choice_button_text is default:
-    properties gui.text_properties("choice_button")
-
-
 ## Quick Menu screen ###########################################################
 ##
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
@@ -282,6 +264,7 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -322,7 +305,7 @@ screen navigation():
 
         if main_menu:
 
-            imagebutton auto "gui/mm_play_%s.png"  xpos 410 ypos 79 focus_mask True action Start()
+            imagebutton auto "gui/mm_play_%s.png"  xpos 410 ypos 79 focus_mask True action Start() hovered [Play ("sound","audio/click.mp3")]
             
             
 
@@ -330,11 +313,11 @@ screen navigation():
 
             textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save") hovered [Play ("sound","audio/click.mp3")]
 
-        imagebutton auto "gui/mm_load_%s.png"  xpos 450 ypos 81 focus_mask True action ShowMenu("load")
+        imagebutton auto "gui/mm_load_%s.png"  xpos 450 ypos 81 focus_mask True action ShowMenu("load") hovered [Play ("sound","audio/click.mp3")]
 
-        imagebutton auto "gui/mm_options_%s.png"  xpos 490 ypos 75 focus_mask True action ShowMenu("preferences")
+        imagebutton auto "gui/mm_options_%s.png"  xpos 490 ypos 75 focus_mask True action ShowMenu("preferences") hovered [Play ("sound","audio/click.mp3")]
 
         if _in_replay:
 
@@ -342,20 +325,20 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("Main Menu") action MainMenu() 
 
 #        textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            imagebutton auto "gui/mm_help_%s.png" xpos 533  ypos 77 focus_mask True action ShowMenu("help")
+            imagebutton auto "gui/mm_help_%s.png" xpos 533  ypos 77 focus_mask True action ShowMenu("help") hovered [Play ("sound","audio/click.mp3")]
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            imagebutton auto "gui/mm_quit_%s.png" focus_mask True  xpos 568 ypos 75 action Quit(confirm=not main_menu)
+            imagebutton auto "gui/mm_quit_%s.png" focus_mask True  xpos 568 ypos 75 action Quit(confirm=not main_menu) hovered [Play ("sound","audio/click.mp3")]
 
 
 style navigation_button is gui_button
@@ -527,7 +510,7 @@ style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "gui/overlay/black.png"
+    background "gui/overlay/Black.png"
 
 style game_menu_navigation_frame:
     xsize 280
@@ -614,7 +597,7 @@ screen save():
     tag menu
 
     use file_slots(_("Save"))
-
+   
 
 screen load():
 
@@ -823,7 +806,7 @@ style slot_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen preferences():
-    add "gui/black.png"
+    add "gui/Black.png"
     tag menu
 
     use game_menu(_("Preferences"), scroll="viewport"):
@@ -1077,7 +1060,6 @@ style history_label_text:
 ## help.
 
 screen help():
-
     tag menu
 
     default device = "keyboard"

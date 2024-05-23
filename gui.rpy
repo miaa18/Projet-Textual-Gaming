@@ -25,7 +25,7 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#610909'
+define gui.accent_color = '#6c2323'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#888888'
@@ -46,8 +46,8 @@ define gui.insensitive_color = '#8888887f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#656667d0'
-define gui.hover_muted_color = '#baaaaa'
+define gui.muted_color = '#2b2626'
+define gui.hover_muted_color = '#9e7474'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#ffffff'
@@ -57,10 +57,10 @@ define gui.interface_text_color = '#6e6a6a'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DJGROSS.ttf"
+define gui.text_font = "Retro Gaming.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DJGROSS.ttf"
+define gui.name_text_font = "Retro Gaming.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "DJGROSS.ttf"
@@ -89,6 +89,7 @@ define gui.title_text_size = 50
 ## The images used for the main and game menus.
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
+define config.main_menu_music = "audio/menu.mp3"
 
 
 ## Dialogue ####################################################################
@@ -106,8 +107,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 0.5
-define gui.name_ypos = 0
+define gui.name_xpos = 0.2
+define gui.name_ypos = -15
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -131,7 +132,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 268
-define gui.dialogue_ypos = 50
+define gui.dialogue_ypos = 25
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 744
@@ -207,7 +208,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 define gui.choice_button_width = 700
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(70, 30, 70, 30)
+define gui.choice_button_borders = Borders(70, 30, 70,30 )
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
@@ -476,8 +477,8 @@ init python:
         ## NVL-mode.
         gui.nvl_height = 170
 
-        gui.nvl_name_width = 305
-        gui.nvl_name_xpos = 325
+        gui.nvl_name_width = 325
+        gui.nvl_name_xpos = 300
 
         gui.nvl_text_width = 915
         gui.nvl_text_xpos = 345
