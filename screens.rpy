@@ -723,7 +723,7 @@ screen savegameName(accept=NullAction()):
             xalign 0.5
             xysize (550, 40)
 
-        textbutton _("{glitch}Save the Game {/glitch}"):
+        textbutton _("Save the Game"):
             xalign 0.5
             keysym ['K_RETURN']
             action [accept, Hide("savegameName")]
