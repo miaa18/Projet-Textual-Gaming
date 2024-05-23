@@ -1051,7 +1051,7 @@ label choice2_lawyer:
     "The first task didn't seem as challenging as you anticipated, in fact it makes you wonder if the hacker tailored it to exploit your past..."
     scene black with dissolve
     pause 1.0
-    scene day1 with dissolve
+    scene bg day1 with dissolve
     pause 2.0
     scene black with dissolve
     scene bg pc with dissolve
@@ -1809,7 +1809,7 @@ label got_point:
 label right:
     scene bg gate with dissolve
     "You waited outside the university for a long time, not knowing what time she would come out."
-    scene bg running with dissolve
+    scene bg run with dissolve
     "You caught sight of her from afar, you believe it's her. She started running towards a bus."
     menu:
         "What will you do?"
